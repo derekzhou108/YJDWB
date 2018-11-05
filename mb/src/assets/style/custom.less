@@ -1,0 +1,22 @@
+@import './variable.less';
+@import './mixin.less';
+
+// 新闻标题与游戏标题
+.content-title{
+  .px2rem(padding-top, 27);
+  &>[class$='-title']{
+    display: block;
+    width: 100%;
+    .px2rem(height, 98);
+    background-repeat: no-repeat;
+    background-position:  left top;
+    background-size: 100% 100%;
+  }
+  .news-title{
+    background-image: url('../../assets/img/news-title.png');
+  }
+  .game-title{
+    .px2rem(margin-top, 6);
+    background-image: url('../../assets/img/game-title.png');
+  }
+}

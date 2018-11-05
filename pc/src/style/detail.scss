@@ -1,0 +1,39 @@
+@import './common/variable';
+@import './common/mixin';
+
+.news-detail{
+  position: relative;
+  margin-top: 60px;
+  padding-bottom: 50px;
+  .detail-title{
+    padding-right: 80px;
+    h2{
+      font-size: 30px;
+      font-weight: bold;
+      color: $color-txt-title;
+      line-height: 1.2;
+    }
+    .txt-line{
+      margin-top: 18px;
+    }
+  }
+  .detail-desc{
+    padding: 0 100px;
+    margin-top: 50px;
+    p{
+      text-indent: 32px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: $color-detail-txt;
+    }
+    img{
+      display: block;
+      margin: 5px auto;
+    }
+  }
+  .item-time{
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+}

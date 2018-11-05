@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./include/meta.html')
+<body>
+
+<div class="page-wrap">
+    <div class="wrap">
+        <!-- @@include('./include/topBar.html') -->
+
+        <div class="shang">
+            <div class="index">
+                @@include('./include/nav.html')
+                <div class="inner">
+                    <div class="appoint-show">
+                        <p class="show-num">
+                            <span id="appointNumber"></span></p>
+                        <div class="show-btn clearfix">
+                            <span id="appointBtn" class="icon-appointment-btn"></span>
+                            <span id="videoBtn" class="icon-video-btn"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="sideBar">
+                  <div class="sideBar-btn">
+                    <a id="fuliBtn" class="fuli-btn" href="javascript:;" title="预约福利"></a>
+                  </div>
+                </div> -->
+            </div>
+
+            <div class="index-content">
+                <div class="inner">
+                    <div class="content-wrap clearfix">
+                        <div class="text-center">
+                            <span class="icon-part-01"></span>
+                        </div>
+                        <div class="wrap-list float-l">
+                            <div class="list-topic">
+                                <h3 class="icon-news-title"></h3>
+                                <a class="index-more" href="/yw/news/list" target="_blank" title="点击查看更多">
+                                    <span>more</span>
+                                    <i class="icon-news-more"></i>
+                                </a>
+                            </div>
+                            <div id="tabHtml"></div>
+                        </div>
+                        <div id="slideBox" class="wrap-slide float-r"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xia">
+            <div class="content-yxqb">
+                <div class="inner text-center">
+                    <div class="content-part">
+                        <span class="icon-part-02"></span>
+                    </div>
+                    <h3 class="icon-game-title"></h3>
+                    <div class="accordion">
+                        <div id="accordionBox" class="accordion-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 预约入会 -->
+    <div id="appointBox" class="popup appoint">
+        <div class="content">
+            <a class="close" href="javascript:;"></a>
+            <div class="content-main text-center">
+                <div class="title"></div>
+                <div id="selectSystem" class="system">
+                    <label data-value='0' class="system-item">
+                        <i class="icon-pop-ios"></i>
+                        <span>iOS</span>
+                    </label>
+                    <label data-value='1' class="system-item">
+                        <i class="icon-pop-android"></i>
+                        <span>Android</span>
+                    </label>
+                </div>
+                <div class="input yzm">
+                    <input type="button" id="sendCode" value="获取验证码" class="yzm-btn">
+                    <input id="phone" type="text" name="phone" placeholder="请输入您的手机号码">
+                </div>
+                <div class="input">
+                    <input id="code" type="text" name="code" placeholder="请输入您的验证码">
+                </div>
+                <div id="submit" class="submit shadow"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 预约福利 -->
+    <div id="fuliBox" class="popup fuli">
+        <div class="content inner">
+            <a class="close" href="javascript:;"></a>
+            <div class="content-main text-center">
+                <div class="title"></div>
+                <ul class="list clearfix">
+                    <li class="item">
+                        <i class="icon-pop-fuli-1"></i>
+                    </li>
+                    <li class="item">
+                        <i class="icon-pop-fuli-2"></i>
+                        <span class="item-finsh"></span>
+                        <div class="item-tips">
+                            <h2>全服玩家获得</h2>
+                            <p>5个超级切尔莉
+                                <span>+</span>200000金币</p>
+                            <h2>预约人数</h2>
+                            <p>
+                                <em>达到100,000人</em>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <i class="icon-pop-fuli-3"></i>
+                        <span class="item-finsh"></span>
+                        <div class="item-tips">
+                            <h2>全服玩家获得</h2>
+                            <p>5个超级切尔莉
+                                <span>+</span>200000金币</p>
+                            <h2>预约人数</h2>
+                            <p>
+                                <em>达到100,000人</em>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <i class="icon-pop-fuli-4"></i>
+                        <span class="item-finsh"></span>
+                        <div class="item-tips">
+                            <h2>全服玩家获得</h2>
+                            <p>5个超级切尔莉
+                                <span>+</span>200000金币</p>
+                            <h2>预约人数</h2>
+                            <p>
+                                <em>达到100,000人</em>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <i class="icon-pop-fuli-5"></i>
+                        <span class="item-finsh"></span>
+                        <div class="item-tips">
+                            <h2>全服玩家获得</h2>
+                            <p>5个超级切尔莉
+                                <span>+</span>200000金币</p>
+                            <h2>预约人数</h2>
+                            <p>
+                                <em>达到100,000人</em>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item last">
+                        <i class="icon-pop-fuli-6"></i>
+                        <span class="item-finsh"></span>
+                        <div class="item-tips">
+                            <h2>全服玩家获得</h2>
+                            <p>5个超级切尔莉
+                                <span>+</span>200000金币</p>
+                            <h2>预约人数</h2>
+                            <p>
+                                <em>达到100,000人</em>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻tab栏 -->
+    <script id="tabTem" type="text/html">
+        <div id="tabTitle" class="list-tab">
+            {{each $data val i}}
+            <span class="tab-name {{i===0? 'active': ''}}">
+          <span>{{val.category}}</span>
+          <em></em>
+        </span>
+            {{/each}}
+        </div>
+        <div id="tabBox" class="list-tab-box">
+            {{each $data val i}}
+            <ul style="display:{{i===0? 'block' : 'none'}}">
+                {{each val.news news index}}
+                <li class="news-item">
+                    {{set num = index + 1}}
+                    <span class="num">{{num>10? num : '0'+num}}</span>
+                    <a href="/yw/news/view?id={{news.id}}" target="_blank" title="{{news.title}}">【{{news.category_name}}】{{news.title}}</a>
+                    <span class="time">{{news.created_at.substr(5,5)}}</span>
+                </li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </div>
+    </script>
+
+    <!-- 新闻轮播图 -->
+    <script id="slideTem" type="text/html">
+        <div class="slide-render">
+            {{each $data val}}
+            <a class="slide-item" href="/yw/news/view?id={{val.new_id}}" target="_blank">
+                <img src="{{val.img_url}}?rev=@@hash">
+            </a>
+            {{/each}}
+        </div>
+        <div class="slide-btn">
+            <span class="prev icon-news-left-arrow"></span>
+            <span class="next icon-news-right-arrow"></span>
+        </div>
+    </script>
+
+    <!-- 游戏情报 -->
+    <script id="accorTem" type="text/html">
+        <ul class="clearfix">
+            {{each $data val i}}
+            <li class="{{i === 0? 'active' : ''}}">
+                <a data-href="{{val.link_url}}" href="javascript:void(0);"  data-title="{{val.role_name}}">
+                    <div class="accordion-poster">
+                        <img src="{{val.pc_role_img}}?rev=@@hash">
+                    </div>
+                    <img class="accordion-img" src="{{val.name_img}}?rev=@@hash">
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    @@include('./include/footer.html')
+</div>
+
+<script src="../dist/js/index.js?rev=@@hash"></script>
+<!--[if lt IE 9]>
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/libs/es5-shim.js" charset="utf-8"></script>
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/libs/es5-sham.js" charset="utf-8"></script>
+<![endif]-->
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?bf3adff1539397d5ae620354967fad7f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+@import './variable.less';
+
+// icon
+[class*=icon-] {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+// 处理某些机型下分辨率,出现白线情况
+.mt-1 {
+  margin-top: -1px;
+}
+
+// 字体加粗
+.bold {
+  font-weight: bold;
+}
+
+// 固定定位
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+// 浮动
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.clearfix:after, .clearfix:before {
+  content: '';
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+// 居左
+.text-left {
+  text-align: left;
+}
+
+// 居右
+.text-right {
+  text-align: right;
+}
+
+// 居中
+.text-center {
+  text-align: center;
+}
+
+// 两端
+.text-justify {
+  text-align: justify;
+}
+
+/*定义为flexbox的"父元素"*/
+.flex {
+  display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box; /* Firefox 17- */
+  display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex; /* Firefox 18+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+
+/*垂直水平居中*/
+.flex-center {
+  /*子元素沿主轴对齐方式居中*/
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /*子元素沿交叉轴对齐方式居中*/
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*子元素沿交叉轴对齐方式居中*/
+.flex-align-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/*两端对齐*/
+.flex-between {
+  justify-content: space-between;
+}
+
+/*指定主轴的伸缩流方向是纵向的*/
+.flex-ver {
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}

@@ -1,0 +1,77 @@
+@import "./variable.less";
+
+// 转换px-->rem
+.px2rem(@name, @px){
+  @{name}: @px / @rem;
+}
+
+// 横线
+.line-style(@width, @height, @color: #fff){
+  .px2rem(width, @width);
+  .px2rem(height, @height);
+  background-color: @color;
+  display: inline-block;
+}
+
+// 1px边框
+.border-1px(@dir: bottom, @color: #c8c7cc){
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    @{dir}: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform+_: scaleY(.5);
+    background-color: @color;
+  }
+}
+
+// 边框
+.border-style(@dir, @width, @color, @style: solid){
+  .px2rem(border-width, @width);
+  border-@{dir}-color: @color;
+  border-@{dir}-style: @style;
+}
+
+// 水平垂直居中
+.poa-center(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform+_: translate3d(-50%, -50%, 0);
+}
+
+// 不换行
+.no-wrap(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 指定行数，默认2行
+.wrap-line(@line: 2){
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+// 缩放
+.scale(@scale){
+  white-space: nowrap;
+  transform+_: scale(@scale/24);
+}
+
+// Placeholder text
+.placeholder(@color: @color-input-txt) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}

@@ -1,0 +1,125 @@
+@import './common/variable';
+@import './common/mixin';
+
+.common {
+  &-nav {
+    padding-top: 16px;
+    height: 27px;
+    background: url('../img/nav-line.png') repeat-x left bottom;
+    .nav-item {
+      font-size: 15px;
+      margin-left: 60px;
+      display: inline-block;
+      &.active a:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $color-activeNav-border;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+      a {
+        position: relative;
+        color: $color-mainNav-text;
+      }
+    }
+  }
+  &-appoint {
+    position: relative;
+    .appoint-contact {
+      position: absolute;
+      right: 0;
+      top: 19px;
+      z-index: 1;
+      a {
+        position: relative;
+        float: left;
+        margin-left: 7px;
+      }
+      .panel-info-wx {
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 50px;
+        img {
+          display: block;
+          width: 108px;
+          margin-top: 12px;
+          margin-left: 6px;
+        }
+      }
+      .panel-info-qq {
+        display: none;
+        position: absolute;
+        left: -70px;
+        top: 55px;
+        color: #fff;
+        font-size: 13px;
+        width: 170px;
+        border: 1px solid #f1d9a2;
+        padding: 8px;
+        box-shadow: 0 0 2px;
+        line-height: 1.3;
+      }
+    }
+    .appoint-logo {
+      position: absolute;
+      left: -290px;
+      top: 10px;
+      width: 279px;
+      height: 172px;
+      background: url('../img/logo-game.png') no-repeat center center;
+      z-index: 1;
+    }
+    .logo-1 {
+      position: absolute;
+      top: 185px;
+      left: -25px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .logo-2 {
+      position: absolute;
+      top: 495px;
+      left: 10px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h2 {
+      display: none;
+      a {
+        display: block;
+        margin-left: 22px;
+        padding-top: 58px;
+        width: 142px;
+        height: 0;
+        overflow: hidden;
+        text-indent: -9999px;
+      }
+    }
+  }
+}
+
+.news {
+
+  .logo-1 {
+    display: none;
+  }
+  .logo-2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .common-appoint .appoint-logo {
+    left: 0;
+  }
+}

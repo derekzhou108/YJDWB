@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./include/meta.html')
+
+<body>
+
+<div class="page-wrap">
+    <div class="wrap">
+        <!-- @@include('./include/topBar.html') -->
+
+        <div class="wrap-news">
+            <div class="news">
+                @@include('./include/nav.html')
+            </div>
+            <div class="text-center">
+                <span class="icon-list-news-title"></span>
+                <div class="news-nav">
+                    <div id="newsTypeHtml" class="inner"></div>
+                </div>
+            </div>
+            <div class="news-figure">
+                <div id="figureHtml"></div>
+                <div id="pageHtml"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻列表 -->
+    <script id="newsTem" type="text/html">
+        <ul>
+            {{each $data val i}}
+            <li class="figure-item">
+
+                <div class="clearfix inner">
+                    <div class="item-time float-l text-right">
+                        <span class="time-date">{{val.created_at.substr(5, 5)}}</span>
+                        <p class="time-year">{{val.created_at.substr(0, 4)}}</p>
+                    </div>
+                    <a target="_blank" href="/yw/news/view?id={{val.id}}" class="link">
+                        <div class="item-txt float-l">
+                            <h3 class="txt-title" title="{{val.title}}">
+                                <span>{{val.title}}</span>
+                            </h3>
+                            <div class="txt-line"></div>
+                            <div class="txt-desc">{{val.description}}</div>
+                        </div>
+                        <div class="item-img float-r">
+                            {{if val.img}}
+                            <img src="{{val.img}}?rev=@@hash">
+                            {{/if}}
+                        </div>
+                    </a>
+                </div>
+
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <!-- 新闻种类 -->
+    <script id="newsTypeTem" type="text/html">
+        <ul class="news-nav-name">
+            {{each $data val i}}
+            <li data-id="{{val.id}}" class="news-type {{i===0? 'active' : ''}}">
+                <span>{{val.category}}</span>
+                <i class="icon-list-news-line"></i>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    @@include('./include/footer.html')
+</div>
+
+<script src="../dist/js/list.js?rev=@@hash"></script>
+</body>
+
+</html>

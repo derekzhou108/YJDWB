@@ -1,0 +1,35 @@
+@import './common/variable';
+
+.footer-wrap {
+  margin-top: 37px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon-footer {
+    background: url(../img/logo.png) no-repeat;
+    width: 190px;
+    height: 73px;
+    background-size: contain;
+  }
+  .icon-newgov {
+    margin-left: 15px;
+    a {
+      width: 128px;
+      display: block;
+    }
+  }
+  .footer-info {
+    ul {
+      float: left;
+      margin-left: 30px;
+      li {
+        font-size: 12px;
+        line-height: 24px;
+        &, a {
+          color: $color-000;
+        }
+      }
+    }
+  }
+}

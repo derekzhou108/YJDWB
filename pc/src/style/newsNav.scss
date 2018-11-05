@@ -1,0 +1,61 @@
+@import './common/variable';
+@import './common/mixin';
+
+.news-nav{
+  margin-top: 50px;
+  border-bottom: 1px solid $color-list-border;
+  .news-nav-name{
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 24px;
+    color: $color-news-nav;
+    li{
+      position: relative;
+      cursor: pointer;
+      display: table-cell;
+      padding-left: 30px;
+      padding-right: 30px;
+      color: $color-news-nav;
+      .icon-list-news-line{
+        position: absolute;
+        left: -12px;
+        bottom: -37px;
+        @include transition(all .2s);
+        @include opacity(0);
+      }
+      &.active{
+        color: $color-active-nav;
+        .icon-list-news-line{
+          @include opacity(1);
+        }
+      }
+      &.news-list-detail{
+        cursor: none;
+      }
+    }
+  }
+  .news-list-detail{
+    li{
+      cursor: auto;
+    }
+  }
+}
+
+// 新闻时间
+.item-time{
+  font-weight: bold;
+  color: $color-active-nav;
+  font-size: 14px;
+  .time-date{
+    font-size: 20px;
+  }
+  .time-year{
+    margin-top: 10px;
+  }
+}
+.txt-line{
+  display: inline-block;
+  width: 128px;
+  height: 2px;
+  background: $color-txt-border;
+}

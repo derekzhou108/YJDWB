@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./include/meta.html')
+<body>
+
+  <div class="page-wrap">
+    <div class="wrap">
+      <!-- @@include('./include/topBar.html') -->
+
+      <div class="wrap-news">
+        <div class="news">
+          @@include('./include/nav.html')
+        </div>
+        <div class="text-center">
+          <span class="icon-list-news-title"></span>
+          <div class="news-nav">
+            <div id="newsTypeHtml" class="inner"></div>
+          </div>
+        </div>
+        <div id="viewHtml" class="news-detail inner"></div>
+      </div>
+    </div>
+
+    <!-- 新闻详情页 -->
+    <script id="viewTem" type="text/html">
+      {{ set view = $data}}
+      <div data-category="{{view.category_id}}" class="detail-title text-center">
+        <h2>​{{view.title}}</h2>
+        <span class="txt-line"></span>
+      </div>
+      <div class="item-time text-right">
+        <span class="time-date">{{view.created_at.substr(5,5)}}</span>
+        <p class="time-year">{{view.created_at.substr(0,4)}}</p>
+      </div>
+      <div class="detail-desc">{{@view.context}}</div>
+    </script>
+
+    <!-- 新闻种类,当前新闻的类别 -->
+    <script id="newsTypeTem" type="text/html">
+      <ul class="news-nav-name news-list-detail">
+        {{each $data val i}}
+        <li data-id="{{val.id}}" class="news-type">
+          <span>{{val.category}}</span>
+          <i class="icon-list-news-line"></i>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
+    @@include('./include/footer.html')
+  </div>
+
+  <script src="../dist/js/view.js?rev=@@hash"></script>
+</body>
+
+</html>

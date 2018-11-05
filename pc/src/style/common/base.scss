@@ -1,0 +1,48 @@
+// 通用class
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}
+.clearfix{
+  zoom: 1;
+  &:after, &:before{
+    content: '';
+    clear: both;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.wrap{
+  min-width: 1200px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.inner{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  background: #fff;
+}
